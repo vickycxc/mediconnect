@@ -1,4 +1,6 @@
-Cara Instalasi:
+# MediConnect
+
+## Cara Instalasi:
 
 1. Buka terminal, pastikan direktori sudah di MediConnect (cd MediConnect)
 2. Jalankan 'npm run build'
