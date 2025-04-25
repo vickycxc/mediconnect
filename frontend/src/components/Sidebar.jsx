@@ -26,7 +26,7 @@ const Sidebar = () => {
       <div className="border-b border-base-300 w-full p-5">
         <div className="flex items-center gap-2">
           <Users className="size-6" />
-          <span className="font-medium hidden lg:block">Contacts</span>
+          <span className="font-medium hidden lg:block">Kontak</span>
         </div>
 
         {/* TODO: Online filter toggle */}
@@ -38,7 +38,7 @@ const Sidebar = () => {
               onChange={(e) => setShowOnlineOnly(e.target.checked)}
               className="checkbox checkbox-sm"
             />
-            <span className="text-sm">Show online only</span>
+            <span className="text-sm">Tampilkan yang Online</span>
           </label>
           <span className="text-xs text-zinc-500">
             {onlineUsers.length - 1} online
@@ -78,7 +78,9 @@ const Sidebar = () => {
         ))}
 
         {filteredUsers.length === 0 && (
-          <div className="text-center text-zinc-500 py-4">No online users</div>
+          <div className="text-center text-zinc-500 py-4">
+            Tidak ada pengguna online
+          </div>
         )}
       </div>
     </aside>

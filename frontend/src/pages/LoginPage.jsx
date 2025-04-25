@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import AuthImagePattern from "../components/AuthImagePattern";
-import { Eye, EyeOff, Lock, Mail, MessageSquare, Loader2 } from "lucide-react";
+import { Eye, EyeOff, Lock, Mail, Loader2, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
@@ -27,10 +27,10 @@ const LoginPage = () => {
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">
               <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <MessageSquare className="size-6 text-primary" />
+                <Activity className="size-6 text-primary" />
               </div>
-              <h1 className="text-2xl font-bold mt-2">Welcome Back</h1>
-              <p className="text-base-content/60">Sign in to your account</p>
+              <h1 className="text-2xl font-bold mt-2">Selamat Datang</h1>
+              <p className="text-base-content/60">Masuk ke akun Anda</p>
             </div>
           </div>
 
@@ -98,16 +98,16 @@ const LoginPage = () => {
                   Loading...
                 </>
               ) : (
-                "Create Account"
+                "Masuk"
               )}
             </button>
           </form>
 
           <div className="text-center">
             <p className="text-base-content/60">
-              Don&apos;t have an account?{" "}
+              Tidak Punya Akun?{" "}
               <Link to="/signup" className="link link-primary">
-                Sign Up
+                Daftar
               </Link>
             </p>
           </div>
@@ -117,8 +117,8 @@ const LoginPage = () => {
       {/* Right Side */}
 
       <AuthImagePattern
-        title="Welcome back!"
-        subtitle="Sign in to continue your conversations and catch up with your messages."
+        title="Selamat Datang!"
+        subtitle="Silakan masuk untuk memulai percakapan dengan dokter."
       />
     </div>
   );

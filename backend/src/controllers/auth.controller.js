@@ -56,12 +56,12 @@ export const login = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(400).json({ message: " Invalid credentials" });
+      return res.status(400).json({ message: " Kredensial tidak valid" });
     }
 
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
     if (!isPasswordCorrect) {
-      return res.status(400).json({ message: " Invalid credentials" });
+      return res.status(400).json({ message: " Kredensial tidak valid" });
     }
 
     generateToken(user._id, res);
